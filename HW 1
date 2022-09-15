@@ -1,0 +1,106 @@
+
+import datetime as dt
+import datetime as dt
+ DOB = dt.datetime(2000, 2 , 3)
+print(dt.datetime.today() - DOB)
+8260 days, 10:12:03.251915
+from datetime import time
+defaultTime = time()
+time1= time(10, 5, 25)
+print("time_1 =", time1)
+time_1 = 10:05:25
+time2= time(hour = 10, minute = 5, second = 25)
+print("time_2 =", time2)
+time_2 = 10:05:25
+time3= time(hour=10, minute= 5, second=25, microsecond=55)
+print("time_3 =", time3)
+time_3 = 10:05:25.000055
+from datetime import datetime
+current = datetime.now()
+print(current)
+​
+2022-09-15 10:19:56.605185
+from datetime import datetime
+​
+# now() gives current date and time
+current = datetime.now()
+​
+# print combinedly
+print(current)
+print("\n")
+print("print each term individually")
+​
+day = current.strftime("%d")
+​
+# print day
+print("day:", day)
+​
+month = current.strftime("%m")
+​
+# print month
+print("month:", month)
+​
+year = current.strftime("%Y")
+​
+# print year
+print("year:", year)
+​
+time = current.strftime("%H:%M:%S")
+​
+# time in hour, minute and second
+print("time:", time)
+​
+print("\n")
+print("printing date and time together")
+date_time = current.strftime("%m/%d/%Y, %H:%M:%S")
+print("date and time:", date_time)
+print("\n")
+​
+# fetching details from timestamp
+timestamp = 1615797322
+date_time = datetime.fromtimestamp(timestamp)
+​
+# %c, %x and %X are used for locale's proper date and time representation
+time_1 = date_time.strftime("%c")
+print("first_output:", time_1)
+​
+time_2 = date_time.strftime("%x")
+print("second_output:", time_2)
+​
+time_3 = date_time.strftime("%X")
+print("third_output:", time_3)
+​
+print("\n")
+​
+# assigning each term manually
+manual = datetime(2021, 3, 28, 23, 55, 59, 342380)
+print("year =", manual.year)
+print("month =", manual.month)
+print("hour =", manual.hour)
+print("minute =", manual.minute)
+print("timestamp =", manual.timestamp())
+​
+2022-09-15 10:20:49.780914
+
+
+print each term individually
+day: 15
+month: 09
+year: 2022
+time: 10:20:49
+
+
+printing date and time together
+date and time: 09/15/2022, 10:20:49
+
+
+first_output: Mon Mar 15 04:35:22 2021
+second_output: 03/15/21
+third_output: 04:35:22
+
+
+year = 2021
+month = 3
+hour = 23
+minute = 55
+timestamp = 1616990159.34238
